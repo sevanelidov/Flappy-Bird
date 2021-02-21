@@ -6,8 +6,8 @@ po=play.new_image (image='njxrf.jpg',x=0,y=0,size=30)
 po.hide()
              
 def draw_tryba(y,delta):
-    tryba1=play.new_image (image='truba.png', size=200,angle=180,x=100,y=y+345+delta)
-    tryba2=play.new_image (image='truba.png', size =300,x=100,y=y)
+    tryba1=play.new_image (image=/img/'truba.png', size=200,angle=180,x=100,y=y+345+delta)
+    tryba2=play.new_image (image=/img/'truba.png', size =300,x=100,y=y)
     return tryba1, tryba2
 
 truby_typie = []
@@ -31,7 +31,7 @@ async def leftright():
             truby_typie.remove(tryba)
     await play.timer (1/40)
 import pygame
-sound=pygame.mixer.Sound ('bablkvas.ogg')
+sound=pygame.mixer.Sound (img/'bablkvas.ogg')
 sound.play()
 @play.repeat_forever
 async def jump():
